@@ -74,7 +74,7 @@ loginBtn.addEventListener("click", (e) => {
         serviceForm.classList.remove("hide");
       }
     });
-  }, 1000);
+  }, 1000); // оставляю таймауты, чтобы было видно колесо загрузки
 });
 
 const checkServiceInput = () => {
@@ -148,6 +148,8 @@ modalWrapper.addEventListener("click", (e) => {
 modalLogout.addEventListener("click", (e) => {
   e.preventDefault();
   fetch("/logout").then((res) => {
-    res.status === 200 ? window.location.reload() : console.error("Error");
+    res.status === 200
+      ? setTimeout(() => window.location.reload(), 3000) // чтобы можно было успеть посмотреть запрос в network
+      : console.error("Error");
   });
 });

@@ -10,7 +10,7 @@ app.use(express.static("public"));
 
 app.post("/login", bodyParser.json(), (req, res) => {
   const { login, password } = req.body;
-  if (login !== userData.login || password !== userData.password) {
+  if (login !== userData.login || password !== userData.password) { 
     return res.sendStatus(400);
   }
   res.sendStatus(200);

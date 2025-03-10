@@ -388,7 +388,7 @@ body {
   display: none;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 1023px) {
   .header {
     height: 60px;
     padding: 0 16px;
@@ -482,5 +482,58 @@ body {
 
   .modal__logout__footer {
     justify-content: start;
+  }
+}
+
+@media screen and (max-width: 374px) {
+  .header__img {
+    width: 138px;
+  }
+
+  .header__service {
+    margin-right: 4px;
+  }
+
+  .header__btn {
+    width: 82px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .header {
+    padding: 0 80px;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1599px) {
+  .header {
+    padding: 0 50px;
+  }
+
+  .main {
+    padding: 0 30px;
+  }
+
+  .main__chart__legend {
+    width: 85%;
+  }
+
+  #myChart {
+    width: 250px;
+    height: 250px;
+  }
+
+  #chart_legend {
+    font-size: 13px;
+  }
+}
+
+@media screen and (min-width: 1280px) and (max-width: 1599px) {
+  .header {
+    padding: 0 80px;
+  }
+
+  .main {
+    padding: 0 80px;
   }
 }
